@@ -1,0 +1,380 @@
+<!doctype html>
+<html>
+<head>
+	<title>Profile</title>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon_imgs/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon_imgs/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon_imgs//apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon_imgs/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon_imgs/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon_imgs/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon_imgs/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon_imgs/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_imgs/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicon_imgs/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_imgs/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon_imgs/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_imgs/favicon-16x16.png">
+
+	<link href="css/creative.min.css" rel="stylesheet">
+	<link rel="manifest" href="favicon_imgs/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="favicon_imgs/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <script src="bundle.js"> </script>
+    <link rel="stylesheet" href="./awesomplete-gh-pages/awesomplete.css" rel="stylesheet">
+ 	<script src = "./awesomplete-gh-pages/awesomplete.js" async></script>
+
+	<style>
+		body {
+			padding-top:0px; word-wrap:break-word;
+		    overflow:hidden;
+		}
+		tr{
+			height:50px;
+			font-size:20px;
+		}
+		.form-control {
+			border: 1px solid black;
+			border-radius: initial !important;
+		}
+
+		.btn-submit {
+			border: 1px solid black;
+			color: black;
+			border-radius: initial !important;
+			background-color: transparent;
+		}
+		.btn-submit:hover, .btn-submit:focus {
+			border-color: black;
+			background-color: rgb(221, 221, 221);
+			color: black;
+		}
+	</style>
+</head>
+
+<body>
+<div style="">
+	<style>
+	.navbar-fixed-left {
+	  width: 300px;
+	  position: fixed;
+	  border-radius: 0;
+	  height: 90%;
+
+	}
+
+	.navbar-fixed-left .navbar-nav > li {
+	  float: none;  /* Cancel default li float: left */
+	  width: 139px;
+	}
+
+	.navbar-fixed-left + .container {
+	  padding-left: 160px;
+	}
+	</style>
+
+<div>
+	<div class = "row">
+		<div class="navbar navbar-inverse navbar-fixed-left col-sm-6" style="height:100%;">
+
+			<div class="" style="height:40px; padding-right:15px; width:285px;border-style: solid; border-bottom:solid #fff;">
+				<h3 style="font-size:20px; text-align:center; color:white">Dashboard</h3>
+			</div>
+			<!-- search bar -->
+			<div class = "row" style = "margin-top:10px; padding-left:15px">
+			  	<input placeholder="search" id="search" style = "width:180px; border-radius:3px;margin-left:10px; height:33px;"></input>
+				<button style = "height:34px;  border-color: #201D1C !important" class = "btn btn-primary btn-default" onclick="readData()"> Search</button>
+			</div>
+
+			<!-- navbar -->
+		  	<ul class="nav navbar-nav">
+		   		<li><a id = "revealButton" onclick = "revealAdd()">Add People</a></li>
+		  	</ul>
+		  	<ul class="nav navbar-nav">
+		  	  <li><a href="/" onclick = "login()">Home</a></li>
+		  	</ul>
+		  	<ul class="nav navbar-nav">
+                    <li><a href="/">Logout</a></li>
+		  	</ul>
+
+
+		 	<script>
+			function revealAdd(){
+				if(document.getElementById("revealButton").innerHTML == "Hide Popup"){
+					document.getElementById("addSection").style.display = "none";
+					document.getElementById("revealButton").innerHTML = "Add People"
+				}
+				else{
+					document.getElementById("addSection").style.display = "block";
+					document.getElementById("revealButton").innerHTML = "Hide Popup"
+				}
+			}
+			</script>
+	</div>
+
+	<!-- second column -->
+	<div class="col-sm-10" style = "margin-left:285px; margin-top:0px">
+		<style>
+		hr.header {
+			margin-top:0px;
+			margin-bottom: 10px;
+			min-width: 860px;
+			border-width: 5px;
+			border-color:#000000;
+		}
+		</style>
+		<h3 id="name" style="height:41px; text-align:center;margin-right:0px; margin-left:0px; margin-top:20px; border-style: solid; border-bottom:solid #ccc;">Users</h3>
+
+		<div class="well" id="changeData" style="margin-top:-10px; display:none">
+			<!-- <h3 style="display:none" id="titleName"></h3> -->
+			<table id="data">
+				<tr>
+					<td>
+						<div style="width:210px; height:170px; margin-left:130px; margin-right:10px; background-color:#fff">
+							<center>
+								<label style="text-align:center; padding-top:10px">
+									Nutrition
+								</label>
+
+								<br>
+
+								<label id="nutrition" style="text-align:center; padding-top:20px">
+								0
+								</label>
+
+								<br>
+								<br>
+
+								<input id="changeNutrition" style="width:100px;text-align:center" placeholder="Change"> </input>
+							</center>
+						</div>
+					</td>
+					<td>
+						<div style="width:210px; height:170px; margin-right:10px; background-color:#fff">
+							<center>
+								<label style="text-align:center; padding-top:10px">
+									Debt
+								</label>
+								<br>
+								<label id="debt" style="text-align:center; padding-top:20px">
+								0
+								</label>
+								<br>
+								<br>
+								<input id="changeDebt" style="width:100px; text-align:center" placeholder="Change"> </input>
+							</center>
+						</div>
+					</td>
+					<td>
+						<div style="width:210px; height:170px; margin-right:10px; background-color:#fff">
+							<center>
+								<label style="text-align:center; padding-top:10px">
+									Healthcare
+								</label>
+								<br>
+								<label id="health" style="text-align:center; padding-top:20px">
+								0
+								</label>
+								<br>
+								<br>
+								<input id="changeHealth" style="width:100px; text-align:center" placeholder="Change"> </input>
+							</center>
+						</div>
+					</td>
+					<td>
+						<div style="width:210px; height:170px; background-color:#fff">
+							<center>
+								<label style="text-align:center; padding-top:10px">
+									Housing
+								</label>
+								<br>
+								<label id="house" style="text-align:center; padding-top:20px">
+								0
+								</label>
+								<br>
+								<br>
+
+								<input id="changeHouse"style="width:100px; text-align:center" placeholder="Change"> </input>
+							</center>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<center>
+				<button id="saveButton" class = "btn btn-primary btn-xl" style="height:40px; width:80px" onclick="changeInfo()"> Save </button>
+			</center>
+		</div>
+	</div>
+</div>
+
+	<!-- adding people section -->
+	<style>
+	.inputBoxes {
+		width: 1500px;
+		height: 40px;
+		margin-bottom: 5px
+	}
+	@media (min-width:400px){
+		.inputBoxes {
+			width: 90px;
+		}
+		hr.header {
+			min-width: 140px
+		}
+	}
+	@media (min-width:768px){
+		.inputBoxes {
+			width: 500px;
+			margin-left:150px;
+		}
+		hr.header {
+			min-width: 860px
+		}
+	}
+	</style>
+
+	<!-- add people section -->
+	<div class = "row" id="addSection" style="display: none;">
+		<div class="col-sm-10" style = "margin-left:285px">
+			<div class="well">
+				<h3 style = "text-align:center;">Add People</h3>
+				<style>
+				hr.primary {
+					border-color:#39425A;
+					border-width:2px;
+					max-width:75px;
+					color:#000000;
+				}
+				</style>
+				<hr class = "primary">
+				<div style="margin-left:165px">
+					<input class = "inputBoxes" id="registerName" placeholder = "Name"></input>
+					<input class = "inputBoxes" id="registerNutrition" placeholder = "Nutrition"></input>
+					<input class = "inputBoxes" id="registerDebt" placeholder = "Debt Help"></input>
+					<input class = "inputBoxes" id="registerHealth" placeholder = "Healthcare"></input>
+					<input class = "inputBoxes" id="registerHouse" placeholder = "Housing"></input>
+				</div>
+				<style>
+				/* Button CSS */
+				.btn-default.active,.btn-default:active,.btn-primary.active,.btn-primary:active,.open>.dropdown-toggle.btn-default,.open>.dropdown-toggle.btn-primary{
+					background-image:none
+				}
+				.btn-default{
+					color:#222;background-color:#fff;border-color:#ffffff;transition:all .35s
+				}
+				.btn-default.active,.btn-default.focus,.btn-default:active,.btn-default:focus,.btn-default:hover,.open>.dropdown-toggle.btn-default{
+					color:#222;background-color:#f2f2f2;border-color:#ffffff
+				}
+				.btn-default.disabled,.btn-default.disabled.active,.btn-default.disabled.focus,.btn-default.disabled:active,.btn-default.disabled:focus,.btn-default.disabled:hover,.btn-default[disabled],.btn-default[disabled].active,.btn-default[disabled].focus,.btn-default[disabled]:active,.btn-default[disabled]:focus,.btn-default[disabled]:hover,fieldset[disabled] .btn-default,fieldset[disabled] .btn-default.active,fieldset[disabled] .btn-default.focus,fieldset[disabled] .btn-default:active,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:hover{
+					background-color:#fff;border-color:#ffffff
+				}
+				.btn-default .badge{
+					color:#fff;background-color:#222
+				}
+
+				/*Dark Button*/
+				.btn-primary{
+					color:#fff;background-color:#05858F;border-color:#ffffff;-webkit-transition:all .35s;-moz-transition:all .35s;transition:all .35s
+				}
+				.btn-primary.active,.btn-primary.focus,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.open>.dropdown-toggle.btn-primary{
+					color:#fff;background-color:#526189;border-color:#ffffff
+				}
+				.btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled.focus,.btn-primary.disabled:active,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled],.btn-primary[disabled].active,.btn-primary[disabled].focus,.btn-primary[disabled]:active,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary.active,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover{
+					background-color:#35723D;border-color:#ffffff
+				}
+				.btn-primary .badge{
+					color:#35723D;background-color:#fff
+				}
+				</style>
+
+				<center><button class = "btn btn-primary btn-xl" style = "margin-top:20px;" onclick="register()">Save</button></center>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="row">
+		<div class="col-sm-6">
+			<div class="well" style="height:500px">
+				<h3>Your projects</h3>
+				<div id="table2">
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="well" style="height:500px">
+				<h3>Other projects</h3>
+				<div id="table">
+				</div>
+			</div>
+		</div>
+	</div> -->
+</div>
+</div>
+
+<script>
+var firebase = require("/node_modules/firebase");
+var ref = new firebase("https://palylaunch.firebaseio.com/");
+var authData = ref.getAuth();
+
+function register(){
+	info = [document.getElementById("registerNutrition").value, document.getElementById("registerDebt").value, document.getElementById("registerHealth").value, document.getElementById("registerHouse").value];
+
+    $.post("/update",JSON.stringify({user:document.getElementById("registerName").value, values:info}),
+    function(data, status){
+		console.log(data);
+		console.log(status);
+    });
+}
+
+function changeInfo(){
+	info = [document.getElementById("changeNutrition").value, document.getElementById("changeDebt").value, document.getElementById("changeHealth").value,document.getElementById("changeHouse").value];
+
+    $.post("/update",JSON.stringify({user:document.getElementById("registerName").value, values:info}),
+    function(data, status){
+		console.log(data);
+		console.log(status);
+		console.log(document.getElementById("changeNutrition").value);
+
+		document.getElementById("nutrition").innerHTML = document.getElementById("changeNutrition").value;
+		document.getElementById("debt").innerHTML = document.getElementById("changeDebt").value;
+		document.getElementById("health").innerHTML = document.getElementById("changeHealth").value;
+		document.getElementById("house").innerHTML = document.getElementById("changeHouse").value;
+    });
+}
+
+function readData(){
+	var replaced = document.getElementById("search").value.split(' ').join('+');
+
+	var string = "/read" + "?user=" + replaced
+	console.log(string);
+
+
+	$.get(string,
+		function(data, status){
+		console.log(data)
+		console.log(status)
+
+		document.getElementById("name").style.display = "block";
+		document.getElementById("changeData").style.display = "block";
+		document.getElementById("nutrition").value = data[1];
+		document.getElementById("debt").value = data[2];
+		document.getElementById("health").value = data[3];
+		document.getElementById("house").value = data[4];
+
+   		return data;
+		}
+	);
+}
+
+
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+</body>
+</html>
