@@ -5381,8 +5381,78 @@
       },
       "links": {},
       "address": "0x5a3adda0acfa83ecb3355b805050c4ab8859ffb5"
+    },
+    "1514110487761": {
+      "events": {
+        "0x70e60b9ac1c6b12ecdc462080b101972148a40ba231d302c31ec3ac6791ea2e7": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "referenceCode",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "issueDate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "offerExpiry",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "vendor",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "counterparty",
+              "type": "address"
+            }
+          ],
+          "name": "TradeRegistered",
+          "type": "event"
+        },
+        "0x54868388f33b7f267191d131ecdce629c5db558db5b616f4fd5aab1956cc7436": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "referenceCode",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "offerAccepted",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "status",
+              "type": "uint8"
+            },
+            {
+              "indexed": true,
+              "name": "vendor",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "counterparty",
+              "type": "address"
+            }
+          ],
+          "name": "TradeCertified",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x55bea66bc18c5ae70608dbbf16342715d36aa014"
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-12-24T10:03:56.418Z"
+  "updatedAt": "2017-12-24T10:16:08.737Z"
 }
