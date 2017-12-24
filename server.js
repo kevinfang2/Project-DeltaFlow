@@ -38,9 +38,21 @@ app.get('/Iprofile', (req, res) => {
 	res.render(path.resolve(__dirname, 'views', 'Iprofile'));
 });
 
-
 app.get('/Mprofile', (req, res) => {
 	res.render(path.resolve(__dirname, 'views', 'Mprofile'));
+});
+
+app.get('/details', (req, res) => {
+  // res.send('m: ' + req.query.m);
+  // res.send('duration: ' + req.query.duration);
+  // res.send('price: ' + req.query.price);
+  // res.send('premium: ' + req.query.premium);
+	res.render(path.resolve(__dirname, 'views', 'details'), {
+    m:req.query.m,
+    duration:req.query.duration,
+    price:req.query.price,
+    premium:req.query.premium
+  });
 });
 
 

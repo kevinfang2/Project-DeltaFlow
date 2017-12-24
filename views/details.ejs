@@ -103,9 +103,6 @@
 			border-radius: 5px;
 			background-color:#fff;
 			border:2px solid #eee;
-			margin:10px;
-			width:303px;
-			height:150px;
 		}
 
 		table {
@@ -127,6 +124,29 @@
 		  border: 1px solid #38678f;
 		  transition: all 0.2s;
 			padding: 0.5rem;
+		}
+		.checkout-btn {
+			margin-top:200px;
+			margin-bottom:20px;
+		  -webkit-border-radius: 4;
+		  -moz-border-radius: 4;
+		  border-radius: 4px;
+		  font-family: Arial;
+		  color: #ffffff;
+		  font-size: 20px;
+		  background: #347ed9;
+		  padding: 5px 20px 5px 20px;
+		  text-decoration: none;
+		}
+
+		.checkout-btn:hover {
+		  background: #3cb0fd;
+		  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+		  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+		  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+		  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+		  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+		  text-decoration: none;
 		}
 	</style>
 </head>
@@ -155,82 +175,44 @@
 	<!-- second column -->
 	<div class="col-sm-10" style = "margin-left:285px; margin-top:0px">
 		<h3 id="name" style="height:41px;margin-right:0px; text-align:center; margin-left:0px; margin-top:20px; border-style: solid; border-bottom:solid #086485;">Contracts Open</h3>
-		<div id="cellcontainer" style="width:100%">
-			<table style="width:100%" id="contacts">
-				<tbody>
-					<tr>
-						<th width="40%">
-							Municipality
-						</th>
-						<th width="20%">
-							Duration
-						</th>
-						<th width="20%">
-							Price
-						</th>
-						<th width="20%">
-							Premium
-						</th>
-					</tr>
-				</tbody>
-			</table>
-			<!-- <div id="cell" style="border:none; width:303px; display:inline-block">
-				<a href="/details" style="text-decoration:none; width:303px;">
-					<div class="smallwell" id="changeData" style="text-align:center; position:relative;">
-							<span>
-								<p id="municapality" style="font-size:24px;text-align:left; margin-top:5px; margin-left:8px;">
-									Municipality
-								</p>
-							</span>
-							<span>
-								<p id="duration" style="text-align:left; margin-left:8px;">
-									Duration
-								</p>
-								<p id="price" style="text-align:left; margin-left:8px;">
-									Some Price
-								</p>
-								<p id="premium" style="text-align:left; margin-left:8px;">
-									Premium
-								</p>
-							</span>
-					</div>
-				</a>
-			</div> -->
+		<div id="cellcontainer" style="display:inline; width:0px">
+			<span style="display:inline-block">
+				<h2 style="display:inline">
+					<%- m -%> -
+				</h2>
+				<h2 style="display:inline">
+					<%- duration -%>
+					<%- price -%>
+					<%- premium -%>
+				</h2>
+			</span>
+			<span style="position:relative; top:10px;">
+				<div style="font-size:20px;">
+					<b style="display:inline">About - </b><p style="word-wrap:break-word; width:30em;"> asdfasdfasaslkdjfalksdjflakdofajlskdfjalskdfjlaskdjflaskdjflaskdjflaksjdflkasjdlfalsdkfjalskdjf</p>
+				</div>
+				<div style="font-size:20px;">
+					<b style="display:inline">Reason for Rate - </b><p style="word-wrap:break-word; width:30em;"> asdfasdfasaslkdjfalksdjflakdofajlskdfjalskdfjlaskdjflaskdjflaskdjflaksjdflkasjdlfalsdkfjalskdjf</p>
+				</div>
+			</span>
+		</div>
+		<div class="smallwell" style="position:fixed; right:40px; top:64px;width:20%">
+			<div style="text-align:center">
+				<h1 style="text-decoration:underline">
+					Buy contact
+				</h1>
+				<h3>
+					# of shares
+				</h3>
+				<form>
+					<input type="number" value="1">  </input>
+
+					<input class="checkout-btn" type="submit" value="Checkout">
+				</form>
+
+			</div>
 		</div>
 	</div>
 </div>
-
-<script>
-function addRow(municipality,duration, price, premium)
-{
-   if (!document.getElementsByTagName) return;
-   tabBody=document.getElementsByTagName("tbody").item(0);
-   row=document.createElement("tr");
-	 link = "/details?m=" + municipality + "&duration=" + duration + "&price=" + price + "&premium=" + premium
-	 row.onclick= function(){
-		 document.location.href=link;
-	 }
-   cell1 = document.createElement("td");
-   cell2 = document.createElement("td");
-	 cell3 = document.createElement("td");
-	 cell4 = document.createElement("td");
-   textnode1=document.createTextNode(municipality);
-   textnode2=document.createTextNode(duration);
-	 textnode3=document.createTextNode(price);
-	 textnode4=document.createTextNode(premium);
-   cell1.appendChild(textnode1);
-   cell2.appendChild(textnode2);
-	 cell3.appendChild(textnode3)
-	 cell4.appendChild(textnode4)
-   row.appendChild(cell1);
-   row.appendChild(cell2);
-	 row.appendChild(cell3)
-	 row.appendChild(cell4)
-   tabBody.appendChild(row);
-}
-
-addRow("dubai", "2 years", "$2", "$120")
-</script>
 
 
 	<!-- adding people section -->
@@ -238,59 +220,7 @@ addRow("dubai", "2 years", "$2", "$120")
 </div>
 
 <script>
-var firebase = require("/node_modules/firebase");
-var ref = new firebase("https://palylaunch.firebaseio.com/");
-var authData = ref.getAuth();
 
-function register(){
-	info = [document.getElementById("registerNutrition").value, document.getElementById("registerDebt").value, document.getElementById("registerHealth").value, document.getElementById("registerHouse").value];
-
-    $.post("/update",JSON.stringify({user:document.getElementById("registerName").value, values:info}),
-    function(data, status){
-		console.log(data);
-		console.log(status);
-    });
-}
-
-function changeInfo(){
-	info = [document.getElementById("changeNutrition").value, document.getElementById("changeDebt").value, document.getElementById("changeHealth").value,document.getElementById("changeHouse").value];
-
-    $.post("/update",JSON.stringify({user:document.getElementById("registerName").value, values:info}),
-    function(data, status){
-		console.log(data);
-		console.log(status);
-		console.log(document.getElementById("changeNutrition").value);
-
-		document.getElementById("nutrition").innerHTML = document.getElementById("changeNutrition").value;
-		document.getElementById("debt").innerHTML = document.getElementById("changeDebt").value;
-		document.getElementById("health").innerHTML = document.getElementById("changeHealth").value;
-		document.getElementById("house").innerHTML = document.getElementById("changeHouse").value;
-    });
-}
-
-function readData(){
-	var replaced = document.getElementById("search").value.split(' ').join('+');
-
-	var string = "/read" + "?user=" + replaced
-	console.log(string);
-
-
-	$.get(string,
-		function(data, status){
-		console.log(data)
-		console.log(status)
-
-		document.getElementById("name").style.display = "block";
-		document.getElementById("changeData").style.display = "block";
-		document.getElementById("nutrition").value = data[1];
-		document.getElementById("debt").value = data[2];
-		document.getElementById("health").value = data[3];
-		document.getElementById("house").value = data[4];
-
-   		return data;
-		}
-	);
-}
 
 
 </script>
