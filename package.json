@@ -8,6 +8,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "scripts": {
+   "lint": "eslint ./",
+   "start": "node server.js",
+   "build": "webpack --progress --display-error-details",
+   "production": "cross-env NODE_ENV=production webpack --progress --display-error-details",
+   "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.config.js --progress --colors --inline --content-base build --open --hot"
+ },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kevinfang2/govhack2.0.git"

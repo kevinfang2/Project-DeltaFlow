@@ -1,0 +1,2170 @@
+{
+  "contractName": "Trades",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "name": "referenceCode",
+          "type": "bytes32"
+        }
+      ],
+      "name": "addReceivedTrade",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getReceivedTrade",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "getCounts",
+      "outputs": [
+        {
+          "name": "sentTradesCount",
+          "type": "uint256"
+        },
+        {
+          "name": "receivedTradesCount",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "remove",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "name": "referenceCode",
+          "type": "bytes32"
+        }
+      ],
+      "name": "addSentTrade",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSentTrade",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610863806100536000396000f300606060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806304ac3b80146100885780632f653279146100ce5780635b4674041461012c578063a7f4377914610180578063b7c5282014610195578063ecc72b0f146101db578063f2fde38b14610239575b600080fd5b341561009357600080fd5b6100cc600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803560001916906020019091905050610272565b005b34156100d957600080fd5b61010e600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919080359060200190919050506102e5565b60405180826000191660001916815260200191505060405180910390f35b341561013757600080fd5b610163600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506103cc565b604051808381526020018281526020019250505060405180910390f35b341561018b57600080fd5b6101936104f1565b005b34156101a057600080fd5b6101d9600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803560001916906020019091905050610582565b005b34156101e657600080fd5b61021b600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919080359060200190919050506105f5565b60405180826000191660001916815260200191505060405180910390f35b341561024457600080fd5b610270600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506106dc565b005b600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010180548060010182816102c691906107ac565b9160005260206000209001600083909190915090600019169055505050565b6000808373ffffffffffffffffffffffffffffffffffffffff161415801561030e575060008210155b801561035e5750600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001018054905082105b151561036957600080fd5b600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600101828154811015156103b857fe5b906000526020600020900154905092915050565b6000806103d76107d8565b600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206040805190810160405290816000820180548060200260200160405190810160405280929190818152602001828054801561047457602002820191906000526020600020905b8154600019168152602001906001019080831161045c575b50505050508152602001600182018054806020026020016040519081016040528092919081815260200182805480156104d057602002820191906000526020600020905b815460001916815260200190600101908083116104b8575b50505050508152505090508060000151518160200151519250925050915091565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415610580576000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b565b600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000180548060010182816105d691906107ac565b9160005260206000209001600083909190915090600019169055505050565b6000808373ffffffffffffffffffffffffffffffffffffffff161415801561061e575060008210155b801561066e5750600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000018054905082105b151561067957600080fd5b600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600001828154811015156106c857fe5b906000526020600020900154905092915050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156107a957600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415156107a857806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b5b50565b8154818355818115116107d3578183600052602060002091820191016107d291906107fe565b5b505050565b60408051908101604052806107eb610823565b81526020016107f8610823565b81525090565b61082091905b8082111561081c576000816000905550600101610804565b5090565b90565b6020604051908101604052806000815250905600a165627a7a72305820d1a3cd2614f2e1cf74ab43e4365847d225af141561c8f4fdf41885c1b7d5d90d0029",
+  "deployedBytecode": "0x606060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806304ac3b80146100885780632f653279146100ce5780635b4674041461012c578063a7f4377914610180578063b7c5282014610195578063ecc72b0f146101db578063f2fde38b14610239575b600080fd5b341561009357600080fd5b6100cc600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803560001916906020019091905050610272565b005b34156100d957600080fd5b61010e600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919080359060200190919050506102e5565b60405180826000191660001916815260200191505060405180910390f35b341561013757600080fd5b610163600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506103cc565b604051808381526020018281526020019250505060405180910390f35b341561018b57600080fd5b6101936104f1565b005b34156101a057600080fd5b6101d9600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803560001916906020019091905050610582565b005b34156101e657600080fd5b61021b600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919080359060200190919050506105f5565b60405180826000191660001916815260200191505060405180910390f35b341561024457600080fd5b610270600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506106dc565b005b600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010180548060010182816102c691906107ac565b9160005260206000209001600083909190915090600019169055505050565b6000808373ffffffffffffffffffffffffffffffffffffffff161415801561030e575060008210155b801561035e5750600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001018054905082105b151561036957600080fd5b600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600101828154811015156103b857fe5b906000526020600020900154905092915050565b6000806103d76107d8565b600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206040805190810160405290816000820180548060200260200160405190810160405280929190818152602001828054801561047457602002820191906000526020600020905b8154600019168152602001906001019080831161045c575b50505050508152602001600182018054806020026020016040519081016040528092919081815260200182805480156104d057602002820191906000526020600020905b815460001916815260200190600101908083116104b8575b50505050508152505090508060000151518160200151519250925050915091565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415610580576000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b565b600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000180548060010182816105d691906107ac565b9160005260206000209001600083909190915090600019169055505050565b6000808373ffffffffffffffffffffffffffffffffffffffff161415801561061e575060008210155b801561066e5750600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000018054905082105b151561067957600080fd5b600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600001828154811015156106c857fe5b906000526020600020900154905092915050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156107a957600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415156107a857806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b5b50565b8154818355818115116107d3578183600052602060002091820191016107d291906107fe565b5b505050565b60408051908101604052806107eb610823565b81526020016107f8610823565b81525090565b61082091905b8082111561081c576000816000905550600101610804565b5090565b90565b6020604051908101604052806000815250905600a165627a7a72305820d1a3cd2614f2e1cf74ab43e4365847d225af141561c8f4fdf41885c1b7d5d90d0029",
+  "sourceMap": "305:1894:5:-;;;238:10:2;230:5;;:18;;;;;;;;;;;;;;;;;;305:1894:5;;;;;;",
+  "deployedSourceMap": "305:1894:5:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1440:155;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1601:277;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1884:313;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;261:64:2;;;;;;;;;;;;;;1016:147:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1169:265;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;678:116:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;1440:155:5;1527:17;:26;1545:7;1527:26;;;;;;;;;;;;;;;:41;;:61;;;;;;;;;;;:::i;:::-;;;;;;;;;;1574:13;1527:61;;;;;;;;;;;;1440:155;;:::o;1601:277::-;1685:7;1727:3;1716:7;:14;;;;:28;;;;;1743:1;1734:5;:10;;1716:28;:88;;;;;1756:17;:26;1774:7;1756:26;;;;;;;;;;;;;;;:41;;:48;;;;1748:5;:56;1716:88;1708:97;;;;;;;;1823:17;:26;1841:7;1823:26;;;;;;;;;;;;;;;:41;;1865:5;1823:48;;;;;;;;;;;;;;;;;;;1816:55;;1601:277;;;;:::o;1884:313::-;1953:20;1975:24;2015:40;;:::i;:::-;2058:17;:26;2076:7;2058:26;;;;;;;;;;;;;;;2015:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2103:16;:27;;;:34;2151:16;:31;;;:38;2095:95;;;;1884:313;;;;:::o;261:64:2:-;380:5;;;;;;;;;;;366:19;;:10;:19;;;362:34;;;312:5;;;;;;;;;;;299:19;;;362:34;261:64::o;1016:147:5:-;1099:17;:26;1117:7;1099:26;;;;;;;;;;;;;;;:37;;:57;;;;;;;;;;;:::i;:::-;;;;;;;;;;1142:13;1099:57;;;;;;;;;;;;1016:147;;:::o;1169:265::-;1249:7;1291:3;1280:7;:14;;;;:28;;;;;1307:1;1298:5;:10;;1280:28;:84;;;;;1320:17;:26;1338:7;1320:26;;;;;;;;;;;;;;;:37;;:44;;;;1312:5;:52;1280:84;1272:93;;;;;;;;1383:17;:26;1401:7;1383:26;;;;;;;;;;;;;;;:37;;1421:5;1383:44;;;;;;;;;;;;;;;;;;;1376:51;;1169:265;;;;:::o;678:116:2:-;380:5;;;;;;;;;;;366:19;;:10;:19;;;362:34;;;767:1;747:22;;:8;:22;;;;743:44;;;779:8;771:5;;:16;;;;;;;;;;;;;;;;;;743:44;362:34;678:116;:::o;305:1894:5:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.2;\n\nimport './Owned.sol';\n\n//\n// Tracks relationships between accounts and \"trades\", such as between an account and trades.\n// This is really just a convenient way to look-up those related accounts (in an efficient/indexed mannger, as opposed to iterating through all trades etc.)\n//\ncontract Trades is Owned {\n\n    struct TradeAssociation {\n        // These arrays represent \"keys\" to look-up in each respective set\n        // e.g. for address: 0xABC: ['abc', 'def', 'hij']\n        // You can query, how many \"things\" does 0xABC have: 3\n        // Then you can get the key of each \"thing\" by index [0, 1, 2]\n        // And you can use the index to look-up \"things\" via their respective contract/manager\n        // So to that effect:\n        // addMethods takes an address and \"key\"\n        // getMethods take an address an index (which gives you back a key)\n        bytes32[] sentTrades;\n        bytes32[] receivedTrades;\n    }\n\n    mapping(address => TradeAssociation) tradeAssociations;\n\n    function addSentTrade(address account, bytes32 referenceCode) public\n    {\n        tradeAssociations[account].sentTrades.push(referenceCode);\n    }\n\n    function getSentTrade(address account, uint index) public constant\n    returns (bytes32)\n    {\n        require(account != 0x0 && index >= 0 && index < tradeAssociations[account].sentTrades.length);\n\n        return tradeAssociations[account].sentTrades[index];\n    }\n\n    function addReceivedTrade(address account, bytes32 referenceCode) public\n    {\n        tradeAssociations[account].receivedTrades.push(referenceCode);\n    }\n\n    function getReceivedTrade(address account, uint index) public constant\n    returns (bytes32)\n    {\n        require(account != 0x0 && index >= 0 && index < tradeAssociations[account].receivedTrades.length);\n\n        return tradeAssociations[account].receivedTrades[index];\n    }\n\n    function getCounts(address account) public constant\n        returns (uint sentTradesCount, uint receivedTradesCount)\n    {\n        TradeAssociation memory tradeAssociation = tradeAssociations[account];\n\n        return (tradeAssociation.sentTrades.length,\n            tradeAssociation.receivedTrades.length);\n    }\n}\n",
+  "sourcePath": "/Users/Kevin/Desktop/govhack2/contracts/Trades.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/Kevin/Desktop/govhack2/contracts/Trades.sol",
+      "exportedSymbols": {
+        "Trades": [
+          919
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".2"
+          ]
+        },
+        "id": 778,
+        "name": "PragmaDirective",
+        "src": "0:23:5"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 164,
+          "absolutePath": "/Users/Kevin/Desktop/govhack2/contracts/Owned.sol",
+          "file": "./Owned.sol",
+          "scope": 920,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 779,
+        "name": "ImportDirective",
+        "src": "25:21:5"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            163
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            919,
+            163
+          ],
+          "name": "Trades",
+          "scope": 920
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Owned",
+                  "referencedDeclaration": 163,
+                  "type": "contract Owned"
+                },
+                "id": 780,
+                "name": "UserDefinedTypeName",
+                "src": "324:5:5"
+              }
+            ],
+            "id": 781,
+            "name": "InheritanceSpecifier",
+            "src": "324:5:5"
+          },
+          {
+            "attributes": {
+              "canonicalName": "Trades.TradeAssociation",
+              "name": "TradeAssociation",
+              "scope": 919,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "sentTrades",
+                  "scope": 788,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32[] storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "bytes32[] storage pointer"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 782,
+                        "name": "ElementaryTypeName",
+                        "src": "888:7:5"
+                      }
+                    ],
+                    "id": 783,
+                    "name": "ArrayTypeName",
+                    "src": "888:9:5"
+                  }
+                ],
+                "id": 784,
+                "name": "VariableDeclaration",
+                "src": "888:20:5"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "receivedTrades",
+                  "scope": 788,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32[] storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "bytes32[] storage pointer"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 785,
+                        "name": "ElementaryTypeName",
+                        "src": "918:7:5"
+                      }
+                    ],
+                    "id": 786,
+                    "name": "ArrayTypeName",
+                    "src": "918:9:5"
+                  }
+                ],
+                "id": 787,
+                "name": "VariableDeclaration",
+                "src": "918:24:5"
+              }
+            ],
+            "id": 788,
+            "name": "StructDefinition",
+            "src": "337:612:5"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "tradeAssociations",
+              "scope": 919,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => struct Trades.TradeAssociation storage ref)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => struct Trades.TradeAssociation storage ref)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 789,
+                    "name": "ElementaryTypeName",
+                    "src": "963:7:5"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "TradeAssociation",
+                      "referencedDeclaration": 788,
+                      "type": "struct Trades.TradeAssociation storage pointer"
+                    },
+                    "id": 790,
+                    "name": "UserDefinedTypeName",
+                    "src": "974:16:5"
+                  }
+                ],
+                "id": 791,
+                "name": "Mapping",
+                "src": "955:36:5"
+              }
+            ],
+            "id": 792,
+            "name": "VariableDeclaration",
+            "src": "955:54:5"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "addSentTrade",
+              "payable": false,
+              "scope": 919,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "account",
+                      "scope": 808,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 793,
+                        "name": "ElementaryTypeName",
+                        "src": "1038:7:5"
+                      }
+                    ],
+                    "id": 794,
+                    "name": "VariableDeclaration",
+                    "src": "1038:15:5"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "referenceCode",
+                      "scope": 808,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 795,
+                        "name": "ElementaryTypeName",
+                        "src": "1055:7:5"
+                      }
+                    ],
+                    "id": 796,
+                    "name": "VariableDeclaration",
+                    "src": "1055:21:5"
+                  }
+                ],
+                "id": 797,
+                "name": "ParameterList",
+                "src": "1037:40:5"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 798,
+                "name": "ParameterList",
+                "src": "1089:0:5"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (bytes32) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sentTrades",
+                                  "referencedDeclaration": 784,
+                                  "type": "bytes32[] storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct Trades.TradeAssociation storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 792,
+                                          "type": "mapping(address => struct Trades.TradeAssociation storage ref)",
+                                          "value": "tradeAssociations"
+                                        },
+                                        "id": 799,
+                                        "name": "Identifier",
+                                        "src": "1099:17:5"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 794,
+                                          "type": "address",
+                                          "value": "account"
+                                        },
+                                        "id": 800,
+                                        "name": "Identifier",
+                                        "src": "1117:7:5"
+                                      }
+                                    ],
+                                    "id": 801,
+                                    "name": "IndexAccess",
+                                    "src": "1099:26:5"
+                                  }
+                                ],
+                                "id": 802,
+                                "name": "MemberAccess",
+                                "src": "1099:37:5"
+                              }
+                            ],
+                            "id": 803,
+                            "name": "MemberAccess",
+                            "src": "1099:42:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 796,
+                              "type": "bytes32",
+                              "value": "referenceCode"
+                            },
+                            "id": 804,
+                            "name": "Identifier",
+                            "src": "1142:13:5"
+                          }
+                        ],
+                        "id": 805,
+                        "name": "FunctionCall",
+                        "src": "1099:57:5"
+                      }
+                    ],
+                    "id": 806,
+                    "name": "ExpressionStatement",
+                    "src": "1099:57:5"
+                  }
+                ],
+                "id": 807,
+                "name": "Block",
+                "src": "1089:74:5"
+              }
+            ],
+            "id": 808,
+            "name": "FunctionDefinition",
+            "src": "1016:147:5"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getSentTrade",
+              "payable": false,
+              "scope": 919,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "account",
+                      "scope": 843,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 809,
+                        "name": "ElementaryTypeName",
+                        "src": "1191:7:5"
+                      }
+                    ],
+                    "id": 810,
+                    "name": "VariableDeclaration",
+                    "src": "1191:15:5"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "index",
+                      "scope": 843,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 811,
+                        "name": "ElementaryTypeName",
+                        "src": "1208:4:5"
+                      }
+                    ],
+                    "id": 812,
+                    "name": "VariableDeclaration",
+                    "src": "1208:10:5"
+                  }
+                ],
+                "id": 813,
+                "name": "ParameterList",
+                "src": "1190:29:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 843,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 814,
+                        "name": "ElementaryTypeName",
+                        "src": "1249:7:5"
+                      }
+                    ],
+                    "id": 815,
+                    "name": "VariableDeclaration",
+                    "src": "1249:7:5"
+                  }
+                ],
+                "id": 816,
+                "name": "ParameterList",
+                "src": "1248:9:5"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 934,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 817,
+                            "name": "Identifier",
+                            "src": "1272:7:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "&&",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_bool",
+                                    "typeString": "bool"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "&&",
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "!=",
+                                      "type": "bool"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 810,
+                                          "type": "address",
+                                          "value": "account"
+                                        },
+                                        "id": 818,
+                                        "name": "Identifier",
+                                        "src": "1280:7:5"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "307830",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": null,
+                                          "token": "number",
+                                          "type": "int_const 0",
+                                          "value": "0x0"
+                                        },
+                                        "id": 819,
+                                        "name": "Literal",
+                                        "src": "1291:3:5"
+                                      }
+                                    ],
+                                    "id": 820,
+                                    "name": "BinaryOperation",
+                                    "src": "1280:14:5"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": ">=",
+                                      "type": "bool"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 812,
+                                          "type": "uint256",
+                                          "value": "index"
+                                        },
+                                        "id": 821,
+                                        "name": "Identifier",
+                                        "src": "1298:5:5"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "30",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": null,
+                                          "token": "number",
+                                          "type": "int_const 0",
+                                          "value": "0"
+                                        },
+                                        "id": 822,
+                                        "name": "Literal",
+                                        "src": "1307:1:5"
+                                      }
+                                    ],
+                                    "id": 823,
+                                    "name": "BinaryOperation",
+                                    "src": "1298:10:5"
+                                  }
+                                ],
+                                "id": 824,
+                                "name": "BinaryOperation",
+                                "src": "1280:28:5"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "<",
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 812,
+                                      "type": "uint256",
+                                      "value": "index"
+                                    },
+                                    "id": 825,
+                                    "name": "Identifier",
+                                    "src": "1312:5:5"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "length",
+                                      "referencedDeclaration": null,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "member_name": "sentTrades",
+                                          "referencedDeclaration": 784,
+                                          "type": "bytes32[] storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "isConstant": false,
+                                              "isLValue": true,
+                                              "isPure": false,
+                                              "lValueRequested": false,
+                                              "type": "struct Trades.TradeAssociation storage ref"
+                                            },
+                                            "children": [
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "overloadedDeclarations": [
+                                                    null
+                                                  ],
+                                                  "referencedDeclaration": 792,
+                                                  "type": "mapping(address => struct Trades.TradeAssociation storage ref)",
+                                                  "value": "tradeAssociations"
+                                                },
+                                                "id": 826,
+                                                "name": "Identifier",
+                                                "src": "1320:17:5"
+                                              },
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "overloadedDeclarations": [
+                                                    null
+                                                  ],
+                                                  "referencedDeclaration": 810,
+                                                  "type": "address",
+                                                  "value": "account"
+                                                },
+                                                "id": 827,
+                                                "name": "Identifier",
+                                                "src": "1338:7:5"
+                                              }
+                                            ],
+                                            "id": 828,
+                                            "name": "IndexAccess",
+                                            "src": "1320:26:5"
+                                          }
+                                        ],
+                                        "id": 829,
+                                        "name": "MemberAccess",
+                                        "src": "1320:37:5"
+                                      }
+                                    ],
+                                    "id": 830,
+                                    "name": "MemberAccess",
+                                    "src": "1320:44:5"
+                                  }
+                                ],
+                                "id": 831,
+                                "name": "BinaryOperation",
+                                "src": "1312:52:5"
+                              }
+                            ],
+                            "id": 832,
+                            "name": "BinaryOperation",
+                            "src": "1280:84:5"
+                          }
+                        ],
+                        "id": 833,
+                        "name": "FunctionCall",
+                        "src": "1272:93:5"
+                      }
+                    ],
+                    "id": 834,
+                    "name": "ExpressionStatement",
+                    "src": "1272:93:5"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 816
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "bytes32"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sentTrades",
+                              "referencedDeclaration": 784,
+                              "type": "bytes32[] storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct Trades.TradeAssociation storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 792,
+                                      "type": "mapping(address => struct Trades.TradeAssociation storage ref)",
+                                      "value": "tradeAssociations"
+                                    },
+                                    "id": 835,
+                                    "name": "Identifier",
+                                    "src": "1383:17:5"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 810,
+                                      "type": "address",
+                                      "value": "account"
+                                    },
+                                    "id": 836,
+                                    "name": "Identifier",
+                                    "src": "1401:7:5"
+                                  }
+                                ],
+                                "id": 837,
+                                "name": "IndexAccess",
+                                "src": "1383:26:5"
+                              }
+                            ],
+                            "id": 838,
+                            "name": "MemberAccess",
+                            "src": "1383:37:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 812,
+                              "type": "uint256",
+                              "value": "index"
+                            },
+                            "id": 839,
+                            "name": "Identifier",
+                            "src": "1421:5:5"
+                          }
+                        ],
+                        "id": 840,
+                        "name": "IndexAccess",
+                        "src": "1383:44:5"
+                      }
+                    ],
+                    "id": 841,
+                    "name": "Return",
+                    "src": "1376:51:5"
+                  }
+                ],
+                "id": 842,
+                "name": "Block",
+                "src": "1262:172:5"
+              }
+            ],
+            "id": 843,
+            "name": "FunctionDefinition",
+            "src": "1169:265:5"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "addReceivedTrade",
+              "payable": false,
+              "scope": 919,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "account",
+                      "scope": 859,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 844,
+                        "name": "ElementaryTypeName",
+                        "src": "1466:7:5"
+                      }
+                    ],
+                    "id": 845,
+                    "name": "VariableDeclaration",
+                    "src": "1466:15:5"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "referenceCode",
+                      "scope": 859,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 846,
+                        "name": "ElementaryTypeName",
+                        "src": "1483:7:5"
+                      }
+                    ],
+                    "id": 847,
+                    "name": "VariableDeclaration",
+                    "src": "1483:21:5"
+                  }
+                ],
+                "id": 848,
+                "name": "ParameterList",
+                "src": "1465:40:5"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 849,
+                "name": "ParameterList",
+                "src": "1517:0:5"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (bytes32) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "receivedTrades",
+                                  "referencedDeclaration": 787,
+                                  "type": "bytes32[] storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct Trades.TradeAssociation storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 792,
+                                          "type": "mapping(address => struct Trades.TradeAssociation storage ref)",
+                                          "value": "tradeAssociations"
+                                        },
+                                        "id": 850,
+                                        "name": "Identifier",
+                                        "src": "1527:17:5"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 845,
+                                          "type": "address",
+                                          "value": "account"
+                                        },
+                                        "id": 851,
+                                        "name": "Identifier",
+                                        "src": "1545:7:5"
+                                      }
+                                    ],
+                                    "id": 852,
+                                    "name": "IndexAccess",
+                                    "src": "1527:26:5"
+                                  }
+                                ],
+                                "id": 853,
+                                "name": "MemberAccess",
+                                "src": "1527:41:5"
+                              }
+                            ],
+                            "id": 854,
+                            "name": "MemberAccess",
+                            "src": "1527:46:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 847,
+                              "type": "bytes32",
+                              "value": "referenceCode"
+                            },
+                            "id": 855,
+                            "name": "Identifier",
+                            "src": "1574:13:5"
+                          }
+                        ],
+                        "id": 856,
+                        "name": "FunctionCall",
+                        "src": "1527:61:5"
+                      }
+                    ],
+                    "id": 857,
+                    "name": "ExpressionStatement",
+                    "src": "1527:61:5"
+                  }
+                ],
+                "id": 858,
+                "name": "Block",
+                "src": "1517:78:5"
+              }
+            ],
+            "id": 859,
+            "name": "FunctionDefinition",
+            "src": "1440:155:5"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getReceivedTrade",
+              "payable": false,
+              "scope": 919,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "account",
+                      "scope": 894,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 860,
+                        "name": "ElementaryTypeName",
+                        "src": "1627:7:5"
+                      }
+                    ],
+                    "id": 861,
+                    "name": "VariableDeclaration",
+                    "src": "1627:15:5"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "index",
+                      "scope": 894,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 862,
+                        "name": "ElementaryTypeName",
+                        "src": "1644:4:5"
+                      }
+                    ],
+                    "id": 863,
+                    "name": "VariableDeclaration",
+                    "src": "1644:10:5"
+                  }
+                ],
+                "id": 864,
+                "name": "ParameterList",
+                "src": "1626:29:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 894,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 865,
+                        "name": "ElementaryTypeName",
+                        "src": "1685:7:5"
+                      }
+                    ],
+                    "id": 866,
+                    "name": "VariableDeclaration",
+                    "src": "1685:7:5"
+                  }
+                ],
+                "id": 867,
+                "name": "ParameterList",
+                "src": "1684:9:5"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 934,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 868,
+                            "name": "Identifier",
+                            "src": "1708:7:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "&&",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_bool",
+                                    "typeString": "bool"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "&&",
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "!=",
+                                      "type": "bool"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 861,
+                                          "type": "address",
+                                          "value": "account"
+                                        },
+                                        "id": 869,
+                                        "name": "Identifier",
+                                        "src": "1716:7:5"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "307830",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": null,
+                                          "token": "number",
+                                          "type": "int_const 0",
+                                          "value": "0x0"
+                                        },
+                                        "id": 870,
+                                        "name": "Literal",
+                                        "src": "1727:3:5"
+                                      }
+                                    ],
+                                    "id": 871,
+                                    "name": "BinaryOperation",
+                                    "src": "1716:14:5"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": ">=",
+                                      "type": "bool"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 863,
+                                          "type": "uint256",
+                                          "value": "index"
+                                        },
+                                        "id": 872,
+                                        "name": "Identifier",
+                                        "src": "1734:5:5"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "30",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": null,
+                                          "token": "number",
+                                          "type": "int_const 0",
+                                          "value": "0"
+                                        },
+                                        "id": 873,
+                                        "name": "Literal",
+                                        "src": "1743:1:5"
+                                      }
+                                    ],
+                                    "id": 874,
+                                    "name": "BinaryOperation",
+                                    "src": "1734:10:5"
+                                  }
+                                ],
+                                "id": 875,
+                                "name": "BinaryOperation",
+                                "src": "1716:28:5"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "<",
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 863,
+                                      "type": "uint256",
+                                      "value": "index"
+                                    },
+                                    "id": 876,
+                                    "name": "Identifier",
+                                    "src": "1748:5:5"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "length",
+                                      "referencedDeclaration": null,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "member_name": "receivedTrades",
+                                          "referencedDeclaration": 787,
+                                          "type": "bytes32[] storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "isConstant": false,
+                                              "isLValue": true,
+                                              "isPure": false,
+                                              "lValueRequested": false,
+                                              "type": "struct Trades.TradeAssociation storage ref"
+                                            },
+                                            "children": [
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "overloadedDeclarations": [
+                                                    null
+                                                  ],
+                                                  "referencedDeclaration": 792,
+                                                  "type": "mapping(address => struct Trades.TradeAssociation storage ref)",
+                                                  "value": "tradeAssociations"
+                                                },
+                                                "id": 877,
+                                                "name": "Identifier",
+                                                "src": "1756:17:5"
+                                              },
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "overloadedDeclarations": [
+                                                    null
+                                                  ],
+                                                  "referencedDeclaration": 861,
+                                                  "type": "address",
+                                                  "value": "account"
+                                                },
+                                                "id": 878,
+                                                "name": "Identifier",
+                                                "src": "1774:7:5"
+                                              }
+                                            ],
+                                            "id": 879,
+                                            "name": "IndexAccess",
+                                            "src": "1756:26:5"
+                                          }
+                                        ],
+                                        "id": 880,
+                                        "name": "MemberAccess",
+                                        "src": "1756:41:5"
+                                      }
+                                    ],
+                                    "id": 881,
+                                    "name": "MemberAccess",
+                                    "src": "1756:48:5"
+                                  }
+                                ],
+                                "id": 882,
+                                "name": "BinaryOperation",
+                                "src": "1748:56:5"
+                              }
+                            ],
+                            "id": 883,
+                            "name": "BinaryOperation",
+                            "src": "1716:88:5"
+                          }
+                        ],
+                        "id": 884,
+                        "name": "FunctionCall",
+                        "src": "1708:97:5"
+                      }
+                    ],
+                    "id": 885,
+                    "name": "ExpressionStatement",
+                    "src": "1708:97:5"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 867
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "bytes32"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "receivedTrades",
+                              "referencedDeclaration": 787,
+                              "type": "bytes32[] storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct Trades.TradeAssociation storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 792,
+                                      "type": "mapping(address => struct Trades.TradeAssociation storage ref)",
+                                      "value": "tradeAssociations"
+                                    },
+                                    "id": 886,
+                                    "name": "Identifier",
+                                    "src": "1823:17:5"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 861,
+                                      "type": "address",
+                                      "value": "account"
+                                    },
+                                    "id": 887,
+                                    "name": "Identifier",
+                                    "src": "1841:7:5"
+                                  }
+                                ],
+                                "id": 888,
+                                "name": "IndexAccess",
+                                "src": "1823:26:5"
+                              }
+                            ],
+                            "id": 889,
+                            "name": "MemberAccess",
+                            "src": "1823:41:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 863,
+                              "type": "uint256",
+                              "value": "index"
+                            },
+                            "id": 890,
+                            "name": "Identifier",
+                            "src": "1865:5:5"
+                          }
+                        ],
+                        "id": 891,
+                        "name": "IndexAccess",
+                        "src": "1823:48:5"
+                      }
+                    ],
+                    "id": 892,
+                    "name": "Return",
+                    "src": "1816:55:5"
+                  }
+                ],
+                "id": 893,
+                "name": "Block",
+                "src": "1698:180:5"
+              }
+            ],
+            "id": 894,
+            "name": "FunctionDefinition",
+            "src": "1601:277:5"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getCounts",
+              "payable": false,
+              "scope": 919,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "account",
+                      "scope": 918,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 895,
+                        "name": "ElementaryTypeName",
+                        "src": "1903:7:5"
+                      }
+                    ],
+                    "id": 896,
+                    "name": "VariableDeclaration",
+                    "src": "1903:15:5"
+                  }
+                ],
+                "id": 897,
+                "name": "ParameterList",
+                "src": "1902:17:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "sentTradesCount",
+                      "scope": 918,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 898,
+                        "name": "ElementaryTypeName",
+                        "src": "1953:4:5"
+                      }
+                    ],
+                    "id": 899,
+                    "name": "VariableDeclaration",
+                    "src": "1953:20:5"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "receivedTradesCount",
+                      "scope": 918,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 900,
+                        "name": "ElementaryTypeName",
+                        "src": "1975:4:5"
+                      }
+                    ],
+                    "id": 901,
+                    "name": "VariableDeclaration",
+                    "src": "1975:24:5"
+                  }
+                ],
+                "id": 902,
+                "name": "ParameterList",
+                "src": "1952:48:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        904
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "tradeAssociation",
+                          "scope": 918,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct Trades.TradeAssociation memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "TradeAssociation",
+                              "referencedDeclaration": 788,
+                              "type": "struct Trades.TradeAssociation storage pointer"
+                            },
+                            "id": 903,
+                            "name": "UserDefinedTypeName",
+                            "src": "2015:16:5"
+                          }
+                        ],
+                        "id": 904,
+                        "name": "VariableDeclaration",
+                        "src": "2015:40:5"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct Trades.TradeAssociation storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 792,
+                              "type": "mapping(address => struct Trades.TradeAssociation storage ref)",
+                              "value": "tradeAssociations"
+                            },
+                            "id": 905,
+                            "name": "Identifier",
+                            "src": "2058:17:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 896,
+                              "type": "address",
+                              "value": "account"
+                            },
+                            "id": 906,
+                            "name": "Identifier",
+                            "src": "2076:7:5"
+                          }
+                        ],
+                        "id": 907,
+                        "name": "IndexAccess",
+                        "src": "2058:26:5"
+                      }
+                    ],
+                    "id": 908,
+                    "name": "VariableDeclarationStatement",
+                    "src": "2015:69:5"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 902
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(uint256,uint256)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "length",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sentTrades",
+                                  "referencedDeclaration": 784,
+                                  "type": "bytes32[] memory"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 904,
+                                      "type": "struct Trades.TradeAssociation memory",
+                                      "value": "tradeAssociation"
+                                    },
+                                    "id": 909,
+                                    "name": "Identifier",
+                                    "src": "2103:16:5"
+                                  }
+                                ],
+                                "id": 910,
+                                "name": "MemberAccess",
+                                "src": "2103:27:5"
+                              }
+                            ],
+                            "id": 911,
+                            "name": "MemberAccess",
+                            "src": "2103:34:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "length",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "receivedTrades",
+                                  "referencedDeclaration": 787,
+                                  "type": "bytes32[] memory"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 904,
+                                      "type": "struct Trades.TradeAssociation memory",
+                                      "value": "tradeAssociation"
+                                    },
+                                    "id": 912,
+                                    "name": "Identifier",
+                                    "src": "2151:16:5"
+                                  }
+                                ],
+                                "id": 913,
+                                "name": "MemberAccess",
+                                "src": "2151:31:5"
+                              }
+                            ],
+                            "id": 914,
+                            "name": "MemberAccess",
+                            "src": "2151:38:5"
+                          }
+                        ],
+                        "id": 915,
+                        "name": "TupleExpression",
+                        "src": "2102:88:5"
+                      }
+                    ],
+                    "id": 916,
+                    "name": "Return",
+                    "src": "2095:95:5"
+                  }
+                ],
+                "id": 917,
+                "name": "Block",
+                "src": "2005:192:5"
+              }
+            ],
+            "id": 918,
+            "name": "FunctionDefinition",
+            "src": "1884:313:5"
+          }
+        ],
+        "id": 919,
+        "name": "ContractDefinition",
+        "src": "305:1894:5"
+      }
+    ],
+    "id": 920,
+    "name": "SourceUnit",
+    "src": "0:2200:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2017-12-24T10:03:55.773Z"
+}
