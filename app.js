@@ -58,7 +58,7 @@ app.get('/Ilogin', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-	res.render(path.resolve(__dirname, 'views', 'Iprofile'));
+	res.render(path.resolve(__dirname, 'views', 'Mprofile'));
 });
 
 

@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+	<title>Profile</title>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon_imgs/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon_imgs/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon_imgs//apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon_imgs/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon_imgs/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon_imgs/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon_imgs/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon_imgs/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_imgs/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicon_imgs/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_imgs/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon_imgs/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_imgs/favicon-16x16.png">
+
+	<link href="css/creative.min.css" rel="stylesheet">
+	<link rel="manifest" href="favicon_imgs/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="favicon_imgs/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <script src="bundle.js"> </script>
+    <link rel="stylesheet" href="./awesomplete-gh-pages/awesomplete.css" rel="stylesheet">
+ 	<script src = "./awesomplete-gh-pages/awesomplete.js" async></script>
+
+	<style>
+		body {
+			padding-top:0px; word-wrap:break-word;
+		    overflow:hidden;
+		}
+		tr{
+			height:50px;
+			font-size:20px;
+		}
+		.form-control {
+			border: 1px solid black;
+			border-radius: initial !important;
+		}
+
+		.btn-submit {
+			border: 1px solid black;
+			color: black;
+			border-radius: initial !important;
+			background-color: transparent;
+		}
+		.btn-submit:hover, .btn-submit:focus {
+			border-color: black;
+			background-color: rgb(221, 221, 221);
+			color: black;
+		}
+		.navbar-fixed-left {
+			width: 300px;
+			position: fixed;
+			border-radius: 0;
+			height: 90%;
+		}
+
+		.navbar-fixed-left .navbar-nav > li {
+			float: none;  /* Cancel default li float: left */
+			width: 139px;
+		}
+
+		.navbar-fixed-left + .container {
+			padding-left: 160px;
+		}
+		hr.header {
+			margin-top:0px;
+			margin-bottom: 10px;
+			min-width: 860px;
+			border-width: 5px;
+			border-color:#000000;
+		}
+
+		.inputBoxes {
+			width: 1500px;
+			height: 40px;
+			margin-bottom: 5px
+		}
+		@media (min-width:400px){
+			.inputBoxes {
+				width: 90px;
+			}
+			hr.header {
+				min-width: 140px
+			}
+		}
+		@media (min-width:768px){
+			.inputBoxes {
+				width: 500px;
+				margin-left:150px;
+			}
+			hr.header {
+				min-width: 860px
+			}
+		}
+
+		.smallwell{
+			border-radius: 5px;
+			background-color:#fff;
+			border:2px solid #eee;
+			margin:10px;
+			width:303px;
+			height:90px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class = "row">
+		<div class="navbar navbar-inverse navbar-fixed-left col-sm-6" style="height:100%;">
+
+			<div class="" style="height:40px; padding-right:15px; width:285px;border-style: solid; border-bottom:solid #fff;">
+				<h3 style="font-size:20px; text-align:center; color:white">Dashboard</h3>
+			</div>
+
+			<!-- navbar -->
+		  	<ul class="nav navbar-nav">
+		   		<li><a id = "revealButton" onclick = "revealAdd()">Current Cities</a></li>
+		  	</ul>
+		  	<ul class="nav navbar-nav">
+		  	  <li><a href="/" onclick = "login()">Home</a></li>
+		  	</ul>
+		  	<ul class="nav navbar-nav">
+          <li><a href="/">Logout</a></li>
+		  	</ul>
+
+	</div>
+
+	<!-- second column -->
+	<div class="col-sm-10" style = "margin-left:285px; margin-top:0px">
+		<h3 id="name" style="height:41px;margin-right:0px; text-align:center; margin-left:0px; margin-top:20px; border-style: solid; border-bottom:solid #086485;">Offers</h3>
+
+		<div id="cellcontainer" style="width:100%">
+			<div id="cell" style="border:none; width:303px; display:inline-block">
+				<a href="/details" style="text-decoration:none; width:303px;">
+					<div class="smallwell" id="changeData" style="text-align:center; position:relative;">
+
+							<span>
+								<p style="font-size:24px;text-align:left; margin-top:5px; margin-left:8px;">
+									Investor Name
+								</p>
+							</span>
+							<span>
+								<p style="text-align:left; margin-left:8px;">
+									Rate
+								</p>
+							</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:7,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+var myDiv = document.getElementById("cell");
+var divClone = myDiv.cloneNode(true);
+document.getElementById("cellcontainer").appendChild(divClone);
+
+console.log("hey")
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGlvDbRwdiifqEUVOjdqcDX92jCf3RUMI&callback=myMap"></script>
+
+	<!-- adding people section -->
+</div>
+</div>
+
+<script>
+var firebase = require("/node_modules/firebase");
+var ref = new firebase("https://palylaunch.firebaseio.com/");
+var authData = ref.getAuth();
+
+function register(){
+	info = [document.getElementById("registerNutrition").value, document.getElementById("registerDebt").value, document.getElementById("registerHealth").value, document.getElementById("registerHouse").value];
+
+    $.post("/update",JSON.stringify({user:document.getElementById("registerName").value, values:info}),
+    function(data, status){
+		console.log(data);
+		console.log(status);
+    });
+}
+
+function changeInfo(){
+	info = [document.getElementById("changeNutrition").value, document.getElementById("changeDebt").value, document.getElementById("changeHealth").value,document.getElementById("changeHouse").value];
+
+    $.post("/update",JSON.stringify({user:document.getElementById("registerName").value, values:info}),
+    function(data, status){
+		console.log(data);
+		console.log(status);
+		console.log(document.getElementById("changeNutrition").value);
+
+		document.getElementById("nutrition").innerHTML = document.getElementById("changeNutrition").value;
+		document.getElementById("debt").innerHTML = document.getElementById("changeDebt").value;
+		document.getElementById("health").innerHTML = document.getElementById("changeHealth").value;
+		document.getElementById("house").innerHTML = document.getElementById("changeHouse").value;
+    });
+}
+
+function readData(){
+	var replaced = document.getElementById("search").value.split(' ').join('+');
+
+	var string = "/read" + "?user=" + replaced
+	console.log(string);
+
+
+	$.get(string,
+		function(data, status){
+		console.log(data)
+		console.log(status)
+
+		document.getElementById("name").style.display = "block";
+		document.getElementById("changeData").style.display = "block";
+		document.getElementById("nutrition").value = data[1];
+		document.getElementById("debt").value = data[2];
+		document.getElementById("health").value = data[3];
+		document.getElementById("house").value = data[4];
+
+   		return data;
+		}
+	);
+}
+
+
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+</body>
+</html>
