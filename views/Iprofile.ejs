@@ -53,71 +53,21 @@
 			background-color: rgb(221, 221, 221);
 			color: black;
 		}
-	</style>
-</head>
+		.navbar-fixed-left {
+			width: 300px;
+			position: fixed;
+			border-radius: 0;
+			height: 90%;
+		}
 
-<body>
-<div style="">
-	<style>
-	.navbar-fixed-left {
-	  width: 300px;
-	  position: fixed;
-	  border-radius: 0;
-	  height: 90%;
-	}
+		.navbar-fixed-left .navbar-nav > li {
+			float: none;  /* Cancel default li float: left */
+			width: 139px;
+		}
 
-	.navbar-fixed-left .navbar-nav > li {
-	  float: none;  /* Cancel default li float: left */
-	  width: 139px;
-	}
-
-	.navbar-fixed-left + .container {
-	  padding-left: 160px;
-	}
-	</style>
-
-<div>
-	<div class = "row">
-		<div class="navbar navbar-inverse navbar-fixed-left col-sm-6" style="height:100%;">
-
-			<div class="" style="height:40px; padding-right:15px; width:285px;border-style: solid; border-bottom:solid #fff;">
-				<h3 style="font-size:20px; text-align:center; color:white">Dashboard</h3>
-			</div>
-			<!-- search bar -->
-			<div class = "row" style = "margin-top:10px; padding-left:15px">
-			  	<input placeholder="search" id="search" style = "width:180px; border-radius:3px;margin-left:10px; height:33px;"></input>
-				<button style = "height:34px;  border-color: #201D1C !important" class = "btn btn-primary btn-default" onclick="readData()"> Search</button>
-			</div>
-
-			<!-- navbar -->
-		  	<ul class="nav navbar-nav">
-		   		<li><a id = "revealButton" onclick = "revealAdd()">Add People</a></li>
-		  	</ul>
-		  	<ul class="nav navbar-nav">
-		  	  <li><a href="/" onclick = "login()">Home</a></li>
-		  	</ul>
-		  	<ul class="nav navbar-nav">
-                    <li><a href="/">Logout</a></li>
-		  	</ul>
-
-
-		 	<script>
-			function revealAdd(){
-				if(document.getElementById("revealButton").innerHTML == "Hide Popup"){
-					document.getElementById("addSection").style.display = "none";
-					document.getElementById("revealButton").innerHTML = "Add People"
-				}
-				else{
-					document.getElementById("addSection").style.display = "block";
-					document.getElementById("revealButton").innerHTML = "Hide Popup"
-				}
-			}
-			</script>
-	</div>
-
-	<!-- second column -->
-	<div class="col-sm-10" style = "margin-left:285px; margin-top:0px">
-		<style>
+		.navbar-fixed-left + .container {
+			padding-left: 160px;
+		}
 		hr.header {
 			margin-top:0px;
 			margin-bottom: 10px;
@@ -125,193 +75,99 @@
 			border-width: 5px;
 			border-color:#000000;
 		}
-		</style>
-		<h3 id="name" style="height:41px; text-align:center;margin-right:0px; margin-left:0px; margin-top:20px; border-style: solid; border-bottom:solid #ccc;">Users</h3>
 
-		<div class="well" id="changeData" style="margin-top:-10px; display:none">
+		.inputBoxes {
+			width: 1500px;
+			height: 40px;
+			margin-bottom: 5px
+		}
+		@media (min-width:400px){
+			.inputBoxes {
+				width: 90px;
+			}
+			hr.header {
+				min-width: 140px
+			}
+		}
+		@media (min-width:768px){
+			.inputBoxes {
+				width: 500px;
+				margin-left:150px;
+			}
+			hr.header {
+				min-width: 860px
+			}
+		}
+
+		.smallwell{
+			border-radius: 5px;
+			background-color:#eee;
+			margin:10px;
+			width:300px;
+			height:200px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class = "row">
+		<div class="navbar navbar-inverse navbar-fixed-left col-sm-6" style="height:100%;">
+
+			<div class="" style="height:40px; padding-right:15px; width:285px;border-style: solid; border-bottom:solid #fff;">
+				<h3 style="font-size:20px; text-align:center; color:white">Dashboard</h3>
+			</div>
+
+			<!-- navbar -->
+		  	<ul class="nav navbar-nav">
+		   		<li><a id = "revealButton" onclick = "revealAdd()">Current Cities</a></li>
+		  	</ul>
+		  	<ul class="nav navbar-nav">
+		  	  <li><a href="/" onclick = "login()">Home</a></li>
+		  	</ul>
+		  	<ul class="nav navbar-nav">
+          <li><a href="/">Logout</a></li>
+		  	</ul>
+
+	</div>
+
+	<!-- second column -->
+	<div class="col-sm-10" style = "margin-left:285px; margin-top:0px">
+		<h3 id="name" style="height:41px;margin-right:0px; text-align:center; margin-left:0px; margin-top:20px; border-style: solid; border-bottom:solid #ccc;">Cities</h3>
+
+		<div class="smallwell" id="changeData" style="text-align:center; position:relative;">
 			<!-- <h3 style="display:none" id="titleName"></h3> -->
-			<table id="data">
-				<tr>
-					<td>
-						<div style="width:210px; height:170px; margin-left:130px; margin-right:10px; background-color:#fff">
-							<center>
-								<label style="text-align:center; padding-top:10px">
-									Nutrition
-								</label>
+				<span>
+					<div style="width:300px;">
+						<div id="googleMap" style="width:100%;height:120px;"></div>
+					</div>
+				</span>
+				<span>
+					<p style="font-size:24px;text-align:left; margin-top:5px; margin-left:8px;">
+						City Name
+					</p>
+				</span>
+				<span>
+					<p style="text-align:left; margin-left:8px;">
+						Population
+					</p>
+				</span>
 
-								<br>
-
-								<label id="nutrition" style="text-align:center; padding-top:20px">
-								0
-								</label>
-
-								<br>
-								<br>
-
-								<input id="changeNutrition" style="width:100px;text-align:center" placeholder="Change"> </input>
-							</center>
-						</div>
-					</td>
-					<td>
-						<div style="width:210px; height:170px; margin-right:10px; background-color:#fff">
-							<center>
-								<label style="text-align:center; padding-top:10px">
-									Debt
-								</label>
-								<br>
-								<label id="debt" style="text-align:center; padding-top:20px">
-								0
-								</label>
-								<br>
-								<br>
-								<input id="changeDebt" style="width:100px; text-align:center" placeholder="Change"> </input>
-							</center>
-						</div>
-					</td>
-					<td>
-						<div style="width:210px; height:170px; margin-right:10px; background-color:#fff">
-							<center>
-								<label style="text-align:center; padding-top:10px">
-									Healthcare
-								</label>
-								<br>
-								<label id="health" style="text-align:center; padding-top:20px">
-								0
-								</label>
-								<br>
-								<br>
-								<input id="changeHealth" style="width:100px; text-align:center" placeholder="Change"> </input>
-							</center>
-						</div>
-					</td>
-					<td>
-						<div style="width:210px; height:170px; background-color:#fff">
-							<center>
-								<label style="text-align:center; padding-top:10px">
-									Housing
-								</label>
-								<br>
-								<label id="house" style="text-align:center; padding-top:20px">
-								0
-								</label>
-								<br>
-								<br>
-
-								<input id="changeHouse"style="width:100px; text-align:center" placeholder="Change"> </input>
-							</center>
-						</div>
-					</td>
-				</tr>
-			</table>
-			<br>
-			<center>
-				<button id="saveButton" class = "btn btn-primary btn-xl" style="height:40px; width:80px" onclick="changeInfo()"> Save </button>
-			</center>
 		</div>
 	</div>
 </div>
 
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:7,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGlvDbRwdiifqEUVOjdqcDX92jCf3RUMI&callback=myMap"></script>
+
 	<!-- adding people section -->
-	<style>
-	.inputBoxes {
-		width: 1500px;
-		height: 40px;
-		margin-bottom: 5px
-	}
-	@media (min-width:400px){
-		.inputBoxes {
-			width: 90px;
-		}
-		hr.header {
-			min-width: 140px
-		}
-	}
-	@media (min-width:768px){
-		.inputBoxes {
-			width: 500px;
-			margin-left:150px;
-		}
-		hr.header {
-			min-width: 860px
-		}
-	}
-	</style>
-
-	<!-- add people section -->
-	<div class = "row" id="addSection" style="display: none;">
-		<div class="col-sm-10" style = "margin-left:285px">
-			<div class="well">
-				<h3 style = "text-align:center;">Add People</h3>
-				<style>
-				hr.primary {
-					border-color:#39425A;
-					border-width:2px;
-					max-width:75px;
-					color:#000000;
-				}
-				</style>
-				<hr class = "primary">
-				<div style="margin-left:165px">
-					<input class = "inputBoxes" id="registerName" placeholder = "Name"></input>
-					<input class = "inputBoxes" id="registerNutrition" placeholder = "Nutrition"></input>
-					<input class = "inputBoxes" id="registerDebt" placeholder = "Debt Help"></input>
-					<input class = "inputBoxes" id="registerHealth" placeholder = "Healthcare"></input>
-					<input class = "inputBoxes" id="registerHouse" placeholder = "Housing"></input>
-				</div>
-				<style>
-				/* Button CSS */
-				.btn-default.active,.btn-default:active,.btn-primary.active,.btn-primary:active,.open>.dropdown-toggle.btn-default,.open>.dropdown-toggle.btn-primary{
-					background-image:none
-				}
-				.btn-default{
-					color:#222;background-color:#fff;border-color:#ffffff;transition:all .35s
-				}
-				.btn-default.active,.btn-default.focus,.btn-default:active,.btn-default:focus,.btn-default:hover,.open>.dropdown-toggle.btn-default{
-					color:#222;background-color:#f2f2f2;border-color:#ffffff
-				}
-				.btn-default.disabled,.btn-default.disabled.active,.btn-default.disabled.focus,.btn-default.disabled:active,.btn-default.disabled:focus,.btn-default.disabled:hover,.btn-default[disabled],.btn-default[disabled].active,.btn-default[disabled].focus,.btn-default[disabled]:active,.btn-default[disabled]:focus,.btn-default[disabled]:hover,fieldset[disabled] .btn-default,fieldset[disabled] .btn-default.active,fieldset[disabled] .btn-default.focus,fieldset[disabled] .btn-default:active,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:hover{
-					background-color:#fff;border-color:#ffffff
-				}
-				.btn-default .badge{
-					color:#fff;background-color:#222
-				}
-
-				/*Dark Button*/
-				.btn-primary{
-					color:#fff;background-color:#05858F;border-color:#ffffff;-webkit-transition:all .35s;-moz-transition:all .35s;transition:all .35s
-				}
-				.btn-primary.active,.btn-primary.focus,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.open>.dropdown-toggle.btn-primary{
-					color:#fff;background-color:#526189;border-color:#ffffff
-				}
-				.btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled.focus,.btn-primary.disabled:active,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled],.btn-primary[disabled].active,.btn-primary[disabled].focus,.btn-primary[disabled]:active,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary.active,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover{
-					background-color:#35723D;border-color:#ffffff
-				}
-				.btn-primary .badge{
-					color:#35723D;background-color:#fff
-				}
-				</style>
-
-				<center><button class = "btn btn-primary btn-xl" style = "margin-top:20px;" onclick="register()">Save</button></center>
-			</div>
-		</div>
-	</div>
-
-	<!-- <div class="row">
-		<div class="col-sm-6">
-			<div class="well" style="height:500px">
-				<h3>Your projects</h3>
-				<div id="table2">
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6">
-			<div class="well" style="height:500px">
-				<h3>Other projects</h3>
-				<div id="table">
-				</div>
-			</div>
-		</div>
-	</div> -->
 </div>
 </div>
 
