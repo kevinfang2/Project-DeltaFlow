@@ -22,6 +22,10 @@ app.get('/Mregister', (req, res) => {
 	res.render(path.resolve(__dirname, 'views', 'Mregister'));
 });
 
+app.get('/Mshareholder', (req, res) => {
+	res.render(path.resolve(__dirname, 'views', 'Mshareholder'));
+});
+
 app.get('/Mlogin', (req, res) => {
 	res.render(path.resolve(__dirname, 'views', 'Mlogin'));
 });

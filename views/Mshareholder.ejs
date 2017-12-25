@@ -107,41 +107,6 @@
 			width:303px;
 			height:90px;
 		}
-
-		.checkout-btn {
-			margin-top:20px;
-			margin-bottom:20px;
-			-webkit-border-radius: 4;
-			-moz-border-radius: 4;
-			border-radius: 4px;
-			font-family: Arial;
-			color: #ffffff;
-			font-size: 20px;
-			background: #347ed9;
-			padding: 5px 20px 5px 20px;
-			text-decoration: none;
-		}
-
-		.checkout-btn:hover {
-			background: #3cb0fd;
-			background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-			background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-			background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-			background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-			background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-			text-decoration: none;
-		}
-
-		input[type=text], select {
-	    width: 100%;
-	    padding: 12px 20px;
-	    margin: 8px 0;
-	    display: inline-block;
-	    border: 1px solid #ccc;
-	    border-radius: 4px;
-	    box-sizing: border-box;
-		}
-
 	</style>
 </head>
 
@@ -155,7 +120,7 @@
 
 			<!-- navbar -->
 		  	<ul class="nav navbar-nav">
-		   		<li><a id = "revealButton" href="/Mshareholder">Profile</a></li>
+		   		<li><a id = "revealButton" href="/Mprofile">Profile</a></li>
 		  	</ul>
 		  	<ul class="nav navbar-nav">
 		  	  <li><a href="/" onclick = "login()">Home</a></li>
@@ -171,36 +136,27 @@
 	<!-- second column -->
 	<div class="col-sm-10" style = "margin-left:285px; margin-top:0px">
 		<h3 id="name" style="height:41px;margin-right:0px; text-align:center; margin-left:0px; margin-top:20px; border-style: solid; border-bottom:solid #086485;">
-			Profile
+			Shareholders
 		</h3>
 
 		<div id="cellcontainer" style="width:100%">
-			<div class="smallwell" style="position:fixed; right:150px; top:64px;width:50%">
-				<div style="text-align:center">
-					<form>
-						<label for="fname">First Name</label>
-						<input type="text" value="1">  </input>
-						<br>
-						<label for="fname">First Name</label>
-						<input type="text" value="1">  </input>
-						<br>
-						<label for="fname">First Name</label>
-						<input type="text" value="1">  </input>
-						<br>
-						<input class="checkout-btn" type="submit" value="Checkout">
-					</form>
+			<div id="cell" style="border:none; width:303px; display:inline-block">
+				<a href="/details" style="text-decoration:none; width:303px;">
+					<div class="smallwell" id="changeData" style="text-align:center; position:relative;">
 
-				</div>
-				<!-- <span>
-					<p style="font-size:24px;text-align:left; margin-top:5px; margin-left:8px;">
-						Investor Name
-					</p>
-				</span>
-				<span>
-					<p style="text-align:left; margin-left:8px;">
-						Rate
-					</p>
-				</span> -->
+							<span>
+								<p style="font-size:24px;text-align:left; margin-top:5px; margin-left:8px;">
+									Investor Name
+								</p>
+							</span>
+							<span>
+								<p style="text-align:left; margin-left:8px;">
+									Rate
+								</p>
+							</span>
+					</div>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
