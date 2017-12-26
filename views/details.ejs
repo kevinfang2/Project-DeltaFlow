@@ -27,6 +27,9 @@
     <script src="bundle.js"> </script>
     <link rel="stylesheet" href="./awesomplete-gh-pages/awesomplete.css" rel="stylesheet">
  	<script src = "./awesomplete-gh-pages/awesomplete.js" async></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 	<style>
 		body {
@@ -126,7 +129,7 @@
 			padding: 0.5rem;
 		}
 		.checkout-btn {
-			margin-top:200px;
+			margin-top:20px;
 			margin-bottom:20px;
 		  -webkit-border-radius: 4;
 		  -moz-border-radius: 4;
@@ -147,6 +150,28 @@
 		  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
 		  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
 		  text-decoration: none;
+		}
+
+		.cd-popup {
+		  opacity: 0;
+		  visibility: hidden;
+		  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+		}
+
+		.cd-popup.is-visible {
+		  opacity: 1;
+		  visibility: visible;
+		  transition: opacity 0.3s 0s, visibility 0s 0s;
+		}
+
+		.cd-popup-container {
+		  transform: translateY(-40px);
+		  transition-property: transform;
+		  transition-duration: 0.3s;
+		}
+
+		.is-visible .cd-popup-container {
+		  transform: translateY(0);
 		}
 	</style>
 </head>
@@ -169,7 +194,6 @@
 		  	<ul class="nav navbar-nav">
           <li><a href="/">Logout</a></li>
 		  	</ul>
-
 	</div>
 
 	<!-- second column -->
@@ -188,10 +212,10 @@
 			</span>
 			<span style="position:relative; top:10px;">
 				<div style="font-size:20px;">
-					<b style="display:inline">About - </b><p style="word-wrap:break-word; width:30em;"> asdfasdfasaslkdjfalksdjflakdofajlskdfjalskdfjlaskdjflaskdjflaskdjflaksjdflkasjdlfalsdkfjalskdjf</p>
+					<b style="display:inline">About - </b><p style="word-wrap:break-word; width:30em;"><%- about -%></p>
 				</div>
 				<div style="font-size:20px;">
-					<b style="display:inline">Reason for Rate - </b><p style="word-wrap:break-word; width:30em;"> asdfasdfasaslkdjfalksdjflakdofajlskdfjalskdfjlaskdjflaskdjflaskdjflaksjdflkasjdlfalsdkfjalskdjf</p>
+					<b style="display:inline">Reason for Rate - </b><p style="word-wrap:break-word; width:30em;"> <%- reason -%> </p>
 				</div>
 			</span>
 		</div>
@@ -203,12 +227,16 @@
 				<h3>
 					# of shares
 				</h3>
-				<form>
-					<input type="number" value="1">  </input>
 
-					<input class="checkout-btn" type="submit" value="Checkout">
-				</form>
-
+					<input type="number" name="numberofshares" id="numberofshares" value="1">  </input>
+					<span>
+						<p id="ethereumcost" style="font-size:100px">
+							<%- price -%>
+						</p>
+					</span>
+					<a id="passbalance" href="/Iprofile">
+						<input class="checkout-btn" type="submit" value="Checkout">
+					</a>
 			</div>
 		</div>
 	</div>
@@ -220,6 +248,17 @@
 </div>
 
 <script>
+var form = document.getElementById("numberofshares");
+var conversion = <%- price -%>;
+var balance = <%- balance -%>
+
+form.addEventListener("input", function () {
+	var numberofshares = form.value
+	console.log("heyo")
+	document.getElementById("ethereumcost").innerHTML = numberofshares * conversion
+	var same = balance - numberofshares*conversion
+	document.getElementById("passbalance").href = "/Iprofile?balance="+same;
+});
 
 
 

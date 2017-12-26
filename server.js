@@ -39,8 +39,11 @@ app.get('/Ilogin', (req, res) => {
 });
 
 app.get('/Iprofile', (req, res) => {
-	res.render(path.resolve(__dirname, 'views', 'Iprofile'));
+	res.render(path.resolve(__dirname, 'views', 'Iprofile'), {
+    balance:req.query.balance,
+  });
 });
+
 
 app.get('/Mprofile', (req, res) => {
 	res.render(path.resolve(__dirname, 'views', 'Mprofile'));
@@ -55,7 +58,10 @@ app.get('/details', (req, res) => {
     m:req.query.m,
     duration:req.query.duration,
     price:req.query.price,
-    premium:req.query.premium
+    premium:req.query.premium,
+    about:req.query.about,
+    reason:req.query.reason,
+    balance:req.query.balance
   });
 });
 
